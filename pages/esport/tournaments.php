@@ -24,7 +24,9 @@ require_once __DIR__ . '/../../partials/header.php';
 
 ?>
 
-<img src="<?= ASSETS_URL ?>/images/illustrations/tournois_fc2026.jpg" alt="EA Sports FC 26" class="tournois-hero" loading="eager">
+<div class="tournois-hero-container">
+    <img src="<?= ASSETS_URL ?>/images/illustrations/tournois_fc2026.jpg" alt="Tournois EA Sports FC 26" class="tournois-hero" loading="eager">
+</div>
 
 <section class="tournois-section" aria-labelledby="tournois-title">
     <div style="background:var(--rose-pale);padding:20px;border-radius:4px;text-align:center;margin-bottom:30px;">

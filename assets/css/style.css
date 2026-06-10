@@ -709,6 +709,34 @@ textarea.reservation-textarea {
 .lots-card ul { display: flex; flex-direction: column; gap: 8px; }
 .lots-card ul li { font-size: 13px; color: #444; }
 
+/* Amélioration visuelle de l'image des tournois */
+.tournois-hero-container {
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    background: #f5e6d3;
+    transition: transform 0.3s ease;
+}
+
+.tournois-hero-container:hover {
+    transform: scale(1.01);
+}
+
+.tournois-hero {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.4s ease;
+    filter: brightness(0.98) contrast(1.02);
+}
+
+.tournois-hero:hover {
+    filter: brightness(1) contrast(1.05);
+}
 /* ==================== EDUCATIONAL PROJECT ==================== */
 .educ-images-row {
     display: grid;
