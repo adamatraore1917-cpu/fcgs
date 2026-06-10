@@ -12,8 +12,10 @@ require_once __DIR__ . '/../../partials/header.php';
 <!-- IMAGES HEADER -->
 <div class="educ-images-row">
     <img src="<?= ASSETS_URL ?>/images/illustrations/educational_project_01.jpg" alt="Joueurs de football FC Grande-Synthe" loading="eager">
-    <img src="<?= ASSETS_URL ?>/images/illustrations/educational_project_02.jpg" alt="Entraîneur avec les jeunes joueurs" loading="eager">
+    <img src="<?= ASSETS_URL ?>/images/illustrations/educational_project_02.jpg" alt="Entraîneur avec les jeunes joueurs" loading="eager">  
 </div>
+
+
 
 <!-- BANNER TITRE -->
 <section class="educ-banner" aria-labelledby="educ-title">

@@ -46,17 +46,31 @@ require_once __DIR__ . '/../partials/header.php';
 
 <!-- TROIS CARTES ESPORT -->
 <div class="esport-cards-grid">
+    <!-- Infrastructure -->
     <div class="esport-card">
+        <div class="esport-card-title">INFRASTRUCTURE</div>
         <img src="<?= ASSETS_URL ?>/images/illustrations/esport_picture_01.jpg" alt="Infrastructure Esport" loading="lazy">
-        <a href="<?= SITE_URL ?>/esport/infrastructure" class="esport-card-btn">S'INFORMER</a>
+        <div class="esport-card-overlay">
+            <a href="<?= SITE_URL ?>/esport/infrastructure" class="esport-card-btn">S'INFORMER</a>
+        </div>
     </div>
+
+    <!-- Tournois -->
     <div class="esport-card">
+        <div class="esport-card-title">TOURNOIS FC 26</div>
         <img src="<?= ASSETS_URL ?>/images/illustrations/tournois_fc2026.jpg" alt="Tournois FC 26" loading="lazy">
-        <a href="<?= SITE_URL ?>/esport/tournaments" class="esport-card-btn">S'INFORMER</a>
+        <div class="esport-card-overlay">
+            <a href="<?= SITE_URL ?>/esport/tournaments" class="esport-card-btn">S'INFORMER</a>
+        </div>
     </div>
+
+    <!-- Projet éducatif -->
     <div class="esport-card">
+        <div class="esport-card-title">PROJET ÉDUCATIF</div>
         <img src="<?= ASSETS_URL ?>/images/illustrations/esport_picture_03.jpg" alt="Projet Éducatif" loading="lazy">
-        <a href="<?= SITE_URL ?>/esport/projet-educatif" class="esport-card-btn">S'INFORMER</a>
+        <div class="esport-card-overlay">
+            <a href="<?= SITE_URL ?>/esport/projet-educatif" class="esport-card-btn">S'INFORMER</a>
+        </div>
     </div>
 </div>
 

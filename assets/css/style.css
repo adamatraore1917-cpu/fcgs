@@ -354,32 +354,59 @@ input, textarea, select { font-family: inherit; }
 }
 
 .esport-card {
-    border: 1px solid #d0d0d0;
-    border-radius: 8px;
+    position: relative;
+    border-radius: 16px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s ease;
+}
+.esport-card:hover {
+    transform: translateY(-6px);
 }
 
-.esport-card img { width: 100%; height: 220px; object-fit: cover; }
+.esport-card-title {
+    background: var(--rouge-esport);
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+    padding: 14px 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ffc107;
+}
+
+.esport-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.esport-card-overlay {
+    padding: 18px 12px 24px;
+    text-align: center;
+    background: white;
+}
 
 .esport-card-btn {
-    border: 1px solid #8B1A1A;
-    color: #8B1A1A;
     background: white;
-    padding: 10px;
-    width: 120px;
-    margin: 12px auto;
-    font-weight: 600;
-    font-size: 13px;
-    text-align: center;
-    cursor: pointer;
+    border: 2px solid var(--rouge-esport);
+    color: var(--rouge-esport);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 8px 24px;
+    border-radius: 40px;
     transition: all 0.2s;
-    display: block;
-    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.esport-card-btn:hover { background: #8B1A1A; color: white; }
+.esport-card-btn:hover {
+    background: var(--rouge-esport);
+    color: white;
+}
 
 /* RESERVATION SECTION */
 .reservation-section {
@@ -727,7 +754,7 @@ textarea.reservation-textarea {
 .tournois-hero {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    max-height: 420px;
     object-fit: cover;
     display: block;
     transition: filter 0.4s ease;
@@ -1767,3 +1794,4 @@ textarea.reservation-textarea {
     .cookie-panel-box { padding: 20px; }
     .cookie-row-title { font-size: 16px; }
 }
+
