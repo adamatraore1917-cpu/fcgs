@@ -451,3 +451,4 @@ fadeElements.forEach(el => {
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     observer.observe(el);
 });
+

@@ -138,23 +138,22 @@ require_once __DIR__ . '/partials/header.php';
             <p>Nous recrutons des éducateurs, coachs et bénévoles pour la saison 2026/2027</p>
         </div>
 
-        <!-- WORLDCUP 2026 -->
-        <div class="worldcup-card">
-            <div class="wc-title">WORLDCUP<br>2026</div>
-            <div class="wc-subtitle">
-                <a href="https://www.fifa.com/fifaplus/fr/tournaments/mens/worldcup/canadamexicousa2026"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   style="color: yellow; text-decoration: none; font-weight: bold;">
-                    FIFA.COM
-                </a>
+        <!-- WORLDCUP 2026 (entierement cliquable) -->
+        <a href="https://www.fifa.com/fifaplus/fr/tournaments/mens/worldcup/canadamexicousa2026"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="worldcup-card-link"
+           style="text-decoration: none; display: block;">
+            <div class="worldcup-card">
+                <div class="wc-title">WORLDCUP<br>2026</div>
+                <div class="wc-subtitle">FIFA.COM</div>
+                <img src="<?= ASSETS_URL ?>/images/illustrations/cup26.jpg" alt="FIFA World Cup 2026">
             </div>
-            <img src="<?= ASSETS_URL ?>/images/illustrations/cup26.jpg" alt="FIFA World Cup 2026">
-        </div>
+        </a>
     </aside>
 </div>
 
-<!-- SPONSORS -->
+<!-- SPONSORS (bien en dessous) -->
 <section class="sponsors-section" aria-labelledby="sponsors-title">
     <h2 class="sponsors-title" id="sponsors-title">LES SPONSORS :</h2>
     <div class="sponsors-grid">
