@@ -1,5 +1,97 @@
 /* FC Grande-Synthe — Feuille de styles principale */
 
+/* ==================== BANDEAU DE BIENVENUE ==================== */
+.hero-welcome {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, var(--bleu-fc) 0%, #0f2b6d 100%);
+    border-radius: 24px;
+    margin-bottom: 40px;
+    padding: 40px 40px;
+    color: white;
+    gap: 30px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text {
+    flex: 2;
+    min-width: 240px;
+}
+
+.hero-title {
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #f0c030;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.hero-description {
+    font-size: 15px;
+    line-height: 1.5;
+    opacity: 0.9;
+    max-width: 550px;
+    margin-bottom: 24px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.btn-hero {
+    background: white;
+    color: var(--bleu-fc);
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 40px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: all 0.25s ease;
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+}
+
+.btn-hero:hover {
+    background: #f0c030;
+    color: #1a2b6b;
+    transform: translateY(-3px);
+}
+
+.btn-hero-esport {
+    background: #8B1A1A;
+    color: white;
+    border: 1px solid #ffc107;
+}
+
+.btn-hero-esport:hover {
+    background: #c0392b;
+    color: white;
+}
+
+.hero-visual {
+    flex: 1;
+    min-width: 160px;
+    height: 140px;
+    background: url('<?= ASSETS_URL ?>/images/illustrations/esport_picture_03.jpg') center/cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+}
 /* ==================== RESET & BASE ==================== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -152,12 +244,21 @@ input, textarea, select { font-family: inherit; }
 
 /* ==================== HOME PAGE LAYOUT ==================== */
 .home-layout {
-    display: grid;
-    grid-template-columns: 1fr 240px;
-    gap: 24px;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 24px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.home-layout > div:first-child {
+    flex: 2; /* colonne principale plus large */
+    min-width: 260px;
+}
+
+.home-sidebar {
+    flex: 1;
+    min-width: 260px;
 }
 
 /* CALENDAR */

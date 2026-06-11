@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__ . '/includes/bootstrap.php';
 trackVisit('accueil');
 
@@ -20,12 +19,6 @@ foreach ($matchs as $m) {
 $moisFr = ['','JANVIER','FÉVRIER','MARS','AVRIL','MAI','JUIN',
            'JUILLET','AOÛT','SEPTEMBRE','OCTOBRE','NOVEMBRE','DÉCEMBRE'];
 
-// Formulaire newsletter
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
-    header('Location: ' . SITE_URL . '/newsletter');
-    exit;
-}
-
 $pageTitle = 'Accueil';
 $breadcrumbCenter = 'BIENVENUE SUR NOTRE SITE INTERNET';
 $currentPage = 'accueil';
@@ -33,8 +26,25 @@ require_once __DIR__ . '/partials/header.php';
 ?>
 
 <div class="home-layout">
-    <!-- CALENDRIER MATCHS -->
+    <!-- COLONNE PRINCIPALE (GAUCHE) -->
     <div>
+        <!-- BANDEAU DE PRÉSENTATION -->
+        <div class="hero-welcome">
+            <div class="hero-text">
+                <h1 class="hero-title">BIENVENUE AU FC GRANDE-SYNTHE</h1>
+                <p class="hero-subtitle">Football & Esport – Passion, Éducation, Ambition</p>
+                <p class="hero-description">
+                    Le FC Grande-Synthe, c’est plus qu’un club : une famille engagée pour le sport,
+                    la jeunesse et l’innovation numérique dans les Hauts-de-France.
+                </p>
+                <div class="hero-buttons">
+                    <a href="<?= SITE_URL ?>/club" class="btn-hero">DÉCOUVRIR LE CLUB</a>
+                    <a href="<?= SITE_URL ?>/esport" class="btn-hero btn-hero-esport">L'ESPACE E-SPORT</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CALENDRIER DES MATCHS -->
         <div class="calendar-widget">
             <div class="calendar-header">
                 <div class="calendar-title">
@@ -48,7 +58,7 @@ require_once __DIR__ . '/partials/header.php';
             </div>
             <div class="calendar-body">
                 <?php if (empty($matchsByDate)): ?>
-                    <p style="color:#888;padding:20px;text-align:center;">Aucun match ce mois-ci.</p>
+                    <p class="no-match">Aucun match ce mois-ci.</p>
                 <?php else: ?>
                     <?php foreach ($matchsByDate as $date => $dayMatchs): ?>
                         <div class="match-day-header"><?= strtoupper(formatDateFr($date)) ?></div>
@@ -71,8 +81,8 @@ require_once __DIR__ . '/partials/header.php';
         </div>
     </div>
 
-    <!-- SIDEBAR -->
-    <aside class="home-sidebar" aria-label="Informations club">
+    <!-- SIDEBAR (DROITE) -->
+    <aside class="home-sidebar">
         <!-- INFOS CLUB -->
         <div class="sidebar-card">
             <div class="sidebar-card-header">
@@ -130,19 +140,17 @@ require_once __DIR__ . '/partials/header.php';
 
         <!-- WORLDCUP 2026 -->
         <div class="worldcup-card">
-           <!-- WORLDCUP 2026 -->
-<div class="worldcup-card">
-    <div class="wc-title">WORLDCUP<br>2026</div>
-    <div class="wc-subtitle">
-        <a href="https://www.fifa.com/fr" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           style="color: yellow; text-decoration: none; font-weight: bold;">
-            FIFA.COM
-        </a>
-    </div>
-    <img src="<?= ASSETS_URL ?>/images/illustrations/cup26.jpg" alt="FIFA World Cup 2026">
-</div>
+            <div class="wc-title">WORLDCUP<br>2026</div>
+            <div class="wc-subtitle">
+                <a href="https://www.fifa.com/fifaplus/fr/tournaments/mens/worldcup/canadamexicousa2026"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   style="color: yellow; text-decoration: none; font-weight: bold;">
+                    FIFA.COM
+                </a>
+            </div>
+            <img src="<?= ASSETS_URL ?>/images/illustrations/cup26.jpg" alt="FIFA World Cup 2026">
+        </div>
     </aside>
 </div>
 
@@ -150,7 +158,6 @@ require_once __DIR__ . '/partials/header.php';
 <section class="sponsors-section" aria-labelledby="sponsors-title">
     <h2 class="sponsors-title" id="sponsors-title">LES SPONSORS :</h2>
     <div class="sponsors-grid">
-        <!-- Zone sponsors — à remplir avec les logos partenaires -->
         <p style="color:#aaa;font-size:13px;">Contactez-nous pour devenir partenaire.</p>
     </div>
 </section>
